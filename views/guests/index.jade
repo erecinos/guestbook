@@ -1,0 +1,17 @@
+extends ../layout
+
+block content
+ h1 Guestbook
+ ul
+   each guest in guests
+    li=guest
+
+ form(action="", method="post")
+   h3 Full Name:
+   input(type="text", name="name")
+   br
+   h3 Comment:
+   input(type="text" name="comment")
+   br
+   br
+   input(type="submit")
